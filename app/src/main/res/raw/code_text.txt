@@ -1,0 +1,2 @@
+//send a text request to Alexa, parse the callback in requestCallback
+alexaManager.sendTextRequest(text, requestCallback);

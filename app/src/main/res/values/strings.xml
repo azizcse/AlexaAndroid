@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Alexa Voice Library</string>
+
+
+    <string name="status_listening">LISTENING…</string>
+    <string name="status_processing">PROCESSING…</string>
+    <string name="status_speaking">SPEAKING…</string>
+    <string name="fragment_action_send_text">Send Text</string>
+    <string name="fragment_action_send_audio">Send Audio</string>
+    <string name="fragment_action_send_prerecorded">Send Prerecorded Audio</string>
+    <string name="action_send_text_description">Send Text will process a string, passing it through the Text To Speech functionality of Android before sending the rendered text to the Alexa server. This is treated just like human speech, but because of the issues of the extra layer, the success rate is not as high as sending raw audio. Additionally this process takes longer due to the extra layer.\n\n\n Click the menu option to view sample code.</string>
+    <string name="action_send_prerecorded_description">Press the the button to send request.\n\n\nSending prerecorded audio will be the fastest way to connect to the Alexa servers, but it\'s also the least flexible. It takes a raw audio file and uploads it directly without any other user interaction. This example plays the recorded value: "Tell me a joke."\n\n\n Click the menu option to view sample code.</string>
+    <string name="action_send_audio_description">Press the microphone to start recording. Recording will end either when pressed again or end of speech detected.\n\n\nSending audio can be very efficient if using the DataRequestBody option, since it can write to the POST while the audio is still being recorded, giving the impression of a very fast response. This can also be used to prepend or append audio to a recorded stream, if you wanted to limit the control to a single skill: "Open Hey Dad and ask for a joke about…" followed by the joke type.\n\n\n Click the menu option to view sample code.</string>
+
+
+</resources>

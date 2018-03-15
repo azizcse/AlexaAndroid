@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+            <item>
+                <shape android:shape="oval">
+                    <padding android:bottom="15dp"
+                        android:left="15dp"
+                        android:top="15dp"
+                        android:right="15dp"/>
+                    <solid android:color="@color/colorAccent"/>
+                    <stroke android:width="@dimen/stroke_width" android:color="@color/white"/>
+                </shape>
+            </item>
+            <item android:drawable="@drawable/ic_stat_search">
+            </item>
+
+        </layer-list>
+    </item>
+    <item android:state_focused="true">
+        <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+            <item>
+                <shape android:shape="oval">
+                    <padding android:bottom="15dp"
+                        android:left="15dp"
+                        android:top="15dp"
+                        android:right="15dp"/>
+                    <solid android:color="@color/colorPrimaryDark"/>
+                    <stroke android:width="@dimen/stroke_width" android:color="@color/white"/>
+                </shape>
+            </item>
+            <item android:drawable="@drawable/ic_stat_search">
+            </item>
+
+        </layer-list>
+    </item>
+
+    <item>
+        <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+            <item>
+                <shape android:shape="oval">
+                    <padding android:bottom="15dp"
+                        android:left="15dp"
+                        android:top="15dp"
+                        android:right="15dp"/>
+                    <solid android:color="@color/colorPrimary"/>
+                    <stroke android:width="@dimen/stroke_width" android:color="#00000000"/>
+                </shape>
+            </item>
+            <item android:drawable="@drawable/ic_stat_search">
+            </item>
+
+        </layer-list>
+    </item>
+</selector>

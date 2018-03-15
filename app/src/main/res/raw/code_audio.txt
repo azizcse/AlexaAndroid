@@ -1,0 +1,100 @@
+private final static int MY_PERMISSIONS_REQUEST_RECORD_AUDIO = 1;
+private static final int AUDIO_RATE = 16000;
+private RawAudioRecorder recorder;
+private RecorderView recorderView;
+
+@Override
+public void onResume() {
+    super.onResume();
+
+    //request API-23 permission for RECORD_AUDIO
+    if (ContextCompat.checkSelfPermission(getActivity(),
+            Manifest.permission.RECORD_AUDIO)
+            != PackageManager.PERMISSION_GRANTED) {
+        if (!ActivityCompat.shouldShowRequestPermissionRationale(getActivity(),
+                Manifest.permission.RECORD_AUDIO)) {
+            ActivityCompat.requestPermissions(getActivity(),
+                    new String[]{Manifest.permission.RECORD_AUDIO},
+                    MY_PERMISSIONS_REQUEST_RECORD_AUDIO);
+        }
+    }
+}
+
+//recieve RECORD_AUDIO permissions request
+@Override
+public void onRequestPermissionsResult(int requestCode,
+                                       @NonNull String permissions[],
+                                       @NonNull int[] grantResults) {
+    switch (requestCode) {
+        case MY_PERMISSIONS_REQUEST_RECORD_AUDIO: {
+            // If request is cancelled, the result arrays are empty.
+            if (!(grantResults.length > 0
+                    && grantResults[0] == PackageManager.PERMISSION_GRANTED)){
+                getActivity().getSupportFragmentManager().beginTransaction().remove(this).commit();
+            }
+        }
+
+    }
+}
+
+@Override
+public void onStop() {
+    super.onStop();
+    //tear down our recorder on stop
+    if(recorder != null){
+        recorder.stop();
+        recorder.release();
+        recorder = null;
+    }
+}
+
+@Override
+public void startListening() {
+    if(recorder == null){
+        recorder = new RawAudioRecorder(AUDIO_RATE);
+    }
+    recorder.start();
+    alexaManager.sendAudioRequest(requestBody, getRequestCallback());
+}
+
+//our streaming data requestBody
+private DataRequestBody requestBody = new DataRequestBody() {
+    @Override
+    public void writeTo(BufferedSink sink) throws IOException {
+        //while our recorder is not null and it is still recording, keep writing to POST data
+        while (recorder != null && !recorder.isPausing()) {
+            if(recorder != null) {
+                final float rmsdb = recorder.getRmsdb();
+                if(recorderView != null) {
+                    recorderView.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            recorderView.setRmsdbLevel(rmsdb);
+                        }
+                    });
+                }
+                if(sink != null && recorder != null) {
+                    sink.write(recorder.consumeRecording());
+                }
+            }
+
+            //sleep and do it all over again
+            try {
+                Thread.sleep(25);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        stopListening();
+    }
+
+};
+
+//tear down our recorder
+private void stopListening(){
+    if(recorder != null) {
+        recorder.stop();
+        recorder.release();
+        recorder = null;
+    }
+}

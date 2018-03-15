@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <padding android:bottom="@dimen/view_padding"
+                android:left="@dimen/view_padding"
+                android:right="@dimen/view_padding"
+                android:top="@dimen/view_padding"/>
+            <corners android:radius="@dimen/corner_radius"/>
+            <solid android:color="@color/white"/>
+            <stroke android:width="@dimen/stroke_width"
+                android:color="@color/colorPrimary"/>
+        </shape>
+    </item>
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <padding android:bottom="@dimen/view_padding"
+                android:left="@dimen/view_padding"
+                android:right="@dimen/view_padding"
+                android:top="@dimen/view_padding"/>
+            <corners android:radius="@dimen/corner_radius"/>
+            <solid android:color="@color/white"/>
+            <stroke android:width="@dimen/stroke_width"
+                android:color="@color/colorAccent"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding android:bottom="@dimen/view_padding"
+                android:left="@dimen/view_padding"
+                android:right="@dimen/view_padding"
+                android:top="@dimen/view_padding"/>
+            <corners android:radius="@dimen/corner_radius"/>
+            <solid android:color="@color/white"/>
+            <stroke android:width="@dimen/stroke_width"
+                android:color="@color/grey"/>
+        </shape>
+    </item>
+</selector>

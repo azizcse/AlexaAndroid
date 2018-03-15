@@ -1,0 +1,11 @@
+//send prerecorded audio to Alexa, parse the callback in requestCallback
+try {
+    //open asset file
+    InputStream is = getActivity().getAssets().open("intros/joke.raw");
+    byte[] fileBytes=new byte[is.available()];
+    is.read(fileBytes);
+    is.close();
+    alexaManager.sendAudioRequest(fileBytes, getRequestCallback());
+} catch (IOException e) {
+    e.printStackTrace();
+}
