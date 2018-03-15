@@ -1,6 +1,7 @@
 package com.willblaschko.android.avs;
 
 import android.app.Application;
+import android.content.Context;
 import android.util.Log;
 
 import com.willblaschko.android.avs.utility.SigningKey;
@@ -13,14 +14,18 @@ public class AlexaApplication extends Application {
 
     //Our Amazon application product ID, this is passed to the server when we authenticate
     private static final String PRODUCT_ID = "interactive_conversation";
-
+    private static Context context;
 
     //Our Application instance if we need to reference it directly
     private static AlexaApplication mInstance;
 
+    public static Context toContext(){
+        return context;
+    }
     @Override
     public void onCreate() {
         super.onCreate();
+        context = getApplicationContext();
         mInstance = this;
 
         //if we run in DEBUG mode, we can get our signing key in the LogCat
