@@ -1,3 +1,6 @@
+This project is directly clone from 
+https://github.com/willblaschko/AlexaAndroid
+
 # Alexa Voice Library
 
 =======
