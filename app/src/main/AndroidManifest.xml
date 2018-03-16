@@ -16,7 +16,7 @@
         android:theme="@style/AppTheme"
         android:name="com.willblaschko.android.avs.AlexaApplication">
 
-        <activity android:name="com.willblaschko.android.avs.MainActivity"
+        <activity android:name=".SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -27,7 +27,15 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.willblaschko.android.avs.LoginWebViewActivity">
+        <activity android:name=".LoginActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name="com.willblaschko.android.avs.MainActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!--<activity android:name="com.willblaschko.android.avs.LoginWebViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -37,7 +45,7 @@
                     android:host="www.amazon.com"
                     android:pathPattern="/ap/oa"/>
             </intent-filter>
-        </activity>
+        </activity>-->
 
         <!-- required so we can get back the result of our authentication //-->
         <activity
