@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_20"
     android:orientation="vertical">
 
     <LinearLayout
@@ -22,7 +24,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#22ffffff"
+        android:background="@color/colorPrimary"
         android:text="@string/action_send_audio_description"
         android:padding="@dimen/activity_horizontal_margin"/>
 

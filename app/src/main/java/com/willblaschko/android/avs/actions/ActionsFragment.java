@@ -57,7 +57,7 @@ public class ActionsFragment extends BaseListenerFragment {
         List<ActionFragmentAdapter.ActionFragmentItem> items = new ArrayList<>();
 
         items.add(new ActionFragmentAdapter.ActionFragmentItem(getString(R.string.fragment_action_send_audio),
-                R.drawable.ic_stat_microphone,
+                R.drawable.ic_keyboard_voice,
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

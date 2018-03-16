@@ -27,7 +27,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#22ffffff"
+        android:background="@color/colorPrimary"
         android:text="@string/action_send_prerecorded_description"
         android:padding="@dimen/activity_horizontal_margin"/>
 

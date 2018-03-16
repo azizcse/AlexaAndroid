@@ -48,7 +48,6 @@ import static com.willblaschko.android.avs.global.Constants.PRODUCT_ID;
 public abstract class BaseActivity extends AppCompatActivity implements BaseListenerFragment.AvsListenerInterface{
 
     private final static String TAG = "BaseActivity";
-
     private final static int STATE_LISTENING = 1;
     private final static int STATE_PROCESSING = 2;
     private final static int STATE_SPEAKING = 3;

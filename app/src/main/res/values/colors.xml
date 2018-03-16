@@ -6,4 +6,68 @@
     <color name="white">#ffffff</color>
     <color name="grey">#aaffffff</color>
     <color name="black">#000000</color>
+
+
+    <!--Design colors-->
+    <color name="red_dark">#F06423</color>
+    <color name="deep_orange">#F75843</color>
+    <color name="light_orange">#FFFBABA1</color>
+
+    <color name="red_dark2">#FFC30016</color>
+    <color name="cyan_light">#c9ebee</color>
+    <color name="cyan">#b5e3e7</color>
+    <color name="cyan_dark">#70BDC6</color>
+    <color name="navy_blue">#214258</color>
+    <color name="navy_blue_dark">#1C3A4E</color>
+    <color name="light_green">#78DC96</color>
+    <color name="light_blue">#55C8F0</color>
+    <color name="blue_black_dark">#13171d</color>
+    <color name="blue_black_light">#516179</color>
+    <color name="blue_grey_light">#A5B4C8</color>
+    <color name="orange">#FFA500</color>
+    <color name="yellow">#fff44f</color>
+    <color name="ash_color">#acacac</color>
+    <color name="ash_color_light">#E2E2E2</color>
+    <color name="color">#5E776D</color>
+
+
+    <color name="grey_1">#FF939393</color>
+    <color name="grey_2">#FF6B6B6B</color>
+    <color name="grey_3">#f7f7f7</color>
+    <color name="grey_5">#f2f2f2</color>
+    <color name="grey_6">#FF3B3B3B</color>
+    <color name="grey_9">#FF6C6C6C</color>
+    <color name="grey_7">#FFD3D3D3</color>
+    <color name="grey_10">#e6e6e6</color>
+    <color name="grey_11">#FFD9D9D9</color>
+    <color name="grey_12">#FF1E2E39</color>
+    <color name="grey_13">#FF5B5B5B</color>
+    <color name="grey_14">#FF313131</color>
+    <color name="grey_16">#FF283D49</color>
+    <color name="grey_17">#FF979797</color>
+    <color name="grey_18">#FF4C4C4C</color>
+    <color name="grey_19">#DFDFDF</color>
+    <color name="grey_20">#cccccc</color>
+    <color name="grey_21">#FF6E6E6E</color>
+    <color name="grey_22">#FFDADADA</color>
+    <color name="grey_23">#FFE2E2E2</color>
+    <color name="grey_24">#FF3C3C3C</color>
+    <color name="grey_25">#FF5D5D5D</color>
+    <color name="grey_40">#999999</color>
+    <color name="grey_60">#666666</color>
+    <color name="grey_80">#37474F</color>
+    <color name="grey_90">#263238</color>
+    <color name="grey_91">#FF282828</color>
+    <color name="grey_92">#FF505050</color>
+    <color name="grey_93">#FF898989</color>
+
+    <color name="colorRipple">#A9A9F5</color>
+    <color name="colorFab">#127AC6</color>
+    <color name="colorStatic">#8ED0B1</color>
+    <color name="colorOutOfRange">#939393</color>
+
+    <color name="tab_color_normal">#4C4C4C</color>
+
+    <color name="red_light">#FF4C39</color>
+    <color name="color_green">#01A076</color>
 </resources>
