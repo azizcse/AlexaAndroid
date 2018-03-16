@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import android.util.Log;
 
+import com.willblaschko.android.avs.utility.SharedPref;
 import com.willblaschko.android.avs.utility.SigningKey;
 
 /**
@@ -27,7 +28,7 @@ public class AlexaApplication extends Application {
         super.onCreate();
         context = getApplicationContext();
         mInstance = this;
-
+        SharedPref.init(getApplicationContext());
         //if we run in DEBUG mode, we can get our signing key in the LogCat
         if(BuildConfig.DEBUG){
             Log.i("AlexaApplication", SigningKey.getCertificateMD5Fingerprint(this));
