@@ -28,7 +28,7 @@ public abstract class BaseListenerFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         //get our AlexaManager instance for convenience
-        alexaManager = AlexaManager.getInstance(getActivity(), PRODUCT_ID);
+        alexaManager = AlexaManager.getInstance(getActivity());
 
         setHasOptionsMenu(true);
     }
