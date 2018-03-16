@@ -19,7 +19,7 @@ public class RecorderView extends View {
 
     private static final int ROTATION_SPEED = 1;
 
-    public static final int COLOR_INDICATOR_DEFAULT = 0xff3F51B5;
+    public static final int COLOR_INDICATOR_DEFAULT = 0xff018965;
     public static final int COLOR_INDICATOR_GONE = 0x00000000;
 
     private float rmsdbLevel = 0;
@@ -71,7 +71,7 @@ public class RecorderView extends View {
 
     private void init(){
         backgroundPaint = new Paint();
-        backgroundPaint.setColor(0x66000000);
+        backgroundPaint.setColor(0xff018965);
         backgroundPaint.setStyle(Paint.Style.FILL);
 
         wavePaint = new Paint();
@@ -97,7 +97,7 @@ public class RecorderView extends View {
         canvas.drawCircle(width / 2, height / 2, getRadius(), wavePaint);
 
         if(microphone == null){
-            microphone = ContextCompat.getDrawable(getContext(), R.drawable.microphone);
+            microphone = ContextCompat.getDrawable(getContext(), R.drawable.ic_mic_black_24dp);
             microphone.setFilterBitmap(true);
             microphone.setBounds((width - imageSize) / 2, (height - imageSize) / 2, width - ((width - imageSize) / 2), height - ((height - imageSize) / 2));
         }

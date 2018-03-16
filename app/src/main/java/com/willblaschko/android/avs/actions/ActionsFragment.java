@@ -67,7 +67,7 @@ public class ActionsFragment extends BaseListenerFragment {
 
 
         items.add(new ActionFragmentAdapter.ActionFragmentItem(getString(R.string.fragment_action_send_prerecorded),
-                android.R.drawable.ic_menu_compass,
+                R.drawable.ic_record_voice_over,
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -75,7 +75,7 @@ public class ActionsFragment extends BaseListenerFragment {
                     }
                 }));
         items.add(new ActionFragmentAdapter.ActionFragmentItem(getString(R.string.fragment_action_send_text),
-                android.R.drawable.ic_menu_edit,
+                R.drawable.ic_question_answer,
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
