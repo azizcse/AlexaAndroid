@@ -6,4 +6,5 @@ package com.willblaschko.android.avs.global;
 
 public class Constants {
     public static final String PRODUCT_ID = "rightmesh";
+    public static final String APPLICATION_ID = "io.left.meshim";
 }
