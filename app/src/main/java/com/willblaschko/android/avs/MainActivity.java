@@ -111,6 +111,11 @@ public class MainActivity extends BaseActivity implements ActionsFragment.Action
         statusBar.animate().alpha(0);
     }
 
+    @Override
+    protected void updateInterface() {
+
+    }
+
 
     @Override
     public void onBackStackChanged() {

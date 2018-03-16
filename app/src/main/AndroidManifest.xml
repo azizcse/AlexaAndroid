@@ -57,6 +57,10 @@
                     android:scheme="amzn" />
             </intent-filter>
         </activity>
+
+        <service android:name=".services.AvsService"
+            android:process=":AvsService">
+        </service>
     </application>
 
 </manifest>
