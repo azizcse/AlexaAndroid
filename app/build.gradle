@@ -3,9 +3,9 @@ apply plugin: 'com.google.protobuf'
 
 buildscript {
     ext {
-        artifactory_app_username = "MimoSaha"
-        artifactory_app_password = "042eda63694c7dd87096e23fd7b72856"
-        artifactory_app_key = "0x88668a8869a818a929d727630afdbd623b943887"
+        artifactory_app_username = "name"
+        artifactory_app_password = "pass"
+        artifactory_app_key = "key"
     }
     repositories {
         maven {
